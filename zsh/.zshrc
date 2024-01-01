@@ -68,6 +68,8 @@ alias clear='clear ; top=""'
 alias xi='sudo xbps-install'
 
 alias xr='sudo xbps-remove'
+
+alias xq='xbps-query'
 ########################################################################################
 
 
