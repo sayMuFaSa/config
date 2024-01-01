@@ -1,0 +1,11 @@
+#!/bin/sh
+
+while read -r my_file;do
+	fullpath="$(pwd)/$my_file"
+	case "$1" in
+	"w")
+		feh --bg-scale "$my_file" ;;
+	"s") echo "$my_file" > /home/user/Jack && echo "$fullpath" >> /home/user/Jack
+	esac
+
+done

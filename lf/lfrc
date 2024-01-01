@@ -1,0 +1,35 @@
+# set icons
+
+cmd Filename %touch $@
+cmd Dirname %mkdir -p $1
+cmd lfcd :{{
+	$touch ~/.cache/lfcd
+	quit
+}}
+# set previewer ~/.config/lf/preview.sh
+# set cleaner ~/.config/lf/cleaner.sh
+# cmd scrollingj :{{
+# down
+# reload
+# }}
+
+# cmd scrollingk :{{
+# up
+# reload
+# $echo $previewer >> ~/jack.com
+# }}
+
+cmd fuzzy ${{
+lf -remote "send $id select $(fzf -e)"
+}}
+
+map . set hidden true
+map <gt> set hidden false
+map D delete
+map a push :Filename<space>
+map A push :Dirname<space>
+map i $cat
+map Q lfcd
+map F fuzzy
+# map j scrollingj
+# map k scrollingk

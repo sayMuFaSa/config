@@ -1,0 +1,17 @@
+*Makefile 
+di 
+fi 
+*.md 
+*.c 
+*.h 
+*.lua 
+*.py 
+*.sh 
+*.go 
+*.sh 
+*.cc 
+*.cpp 
+*README 
+*Dockerfile 󰡨
+*LICENSE 
+*.jpg 

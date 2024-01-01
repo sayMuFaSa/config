@@ -1,0 +1,64 @@
+env:
+  TERM: xterm-256color
+font:
+  # normal:
+    # family: Roboto
+  # bold:
+    # family: Source Code Pro
+    # style: Regular
+  size: 10
+# window:
+#   position:
+#     x: 510
+#     y: 220
+#   dimensions:
+#     columns: 100
+#     lines: 30
+#
+doom_light: &doom_light
+  primary:
+    foreground: '#383a42'
+    background: '#fafafa'
+  cursor:
+    cursor: '#4078f2'
+    text: '#fafafa'
+  normal:
+    black: '#fafafa'
+    red: '#e45649'
+    green: '#50a14f'
+    yellow: '#986801'
+    blue: '#4078f2'
+    magenta: '#b751b6'
+    cyan: '#0184bc'
+    white: '#383a42'
+  bright:
+    black: '#9ca0a4'
+    red: '#e45649'
+    green: '#50a14f'
+    yellow: '#da8548'
+    blue: '#4078f2'
+    magenta: '#b751b6'
+    cyan: '#0184bc'
+    white: '#efefef'
+
+breeze: &breeze
+  primary:
+    background: '#232627'
+    # foreground: '#fcfcfc'
+  normal:
+    black: '#232627'
+    red: '#ed1515'
+    green: '#11d116'
+    yellow: '#f67400'
+    blue: '#1d99f3'
+    magenta: '#9b59b6'
+    cyan: '#1abc9c'
+    white: '#fcfcfc'
+
+
+# Apply
+colors: *breeze
+
+
+window:
+    opacity: 0.9

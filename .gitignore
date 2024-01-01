@@ -1,0 +1,28 @@
+.zcompdump
+plugin
+.git
+.gsd-keyboard.settings-ported
+Code - OSS/
+Code/
+Foxit Software/
+QtProject.conf
+Vieb/
+VirtualBox/
+blender/
+dconf/
+dlv/
+evolution/
+glib-2.0/
+gnome-initial-setup-done
+go/
+ibus/
+kernel.org/
+kernel/
+libvirt/
+menus/
+mimeapps.list
+neofetch/
+nushell/
+pulse/
+qtile/
+qutebrowser/
