@@ -1,4 +1,4 @@
-.zcompdump
+.zcompdump*
 plugin
 .git
 .gsd-keyboard.settings-ported
@@ -26,3 +26,6 @@ nushell/
 pulse/
 qtile/
 qutebrowser/
+xmobar/
+conky/
+htop/

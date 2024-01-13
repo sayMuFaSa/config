@@ -55,8 +55,7 @@ readonly wallpaper=$HOME/Downloads/image/mountains.jpg
 
 brightnessctl set 30
 xset r rate 300 50
-polybar --config=~/.config/polybar/config.ini&
-sxhkd&
+sxhkd &
+polybar &
 feh --bg-scale $wallpaper &
-xbanish &
 exec bspwm

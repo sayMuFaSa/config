@@ -23,8 +23,7 @@ cmd fuzzy ${{
 lf -remote "send $id select $(fzf -e)"
 }}
 
-map . set hidden true
-map <gt> set hidden false
+map . set hidden!
 map D delete
 map a push :Filename<space>
 map A push :Dirname<space>

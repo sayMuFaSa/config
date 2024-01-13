@@ -1,8 +1,12 @@
-vim.cmd("packadd packer.nvim")
+vim.cmd('packadd packer.nvim')
 
-return require('packer').startup(function(use)
-	-- Packer can manage itself
+require('packer').startup(function(use)
+	
+	----------- Packer itself ------------------------------
 	use {'wbthomason/packer.nvim'}
+	--------------------------------------------------------
+
+
 
 	----------- Lsp and completion ---------------------------
 	use {
@@ -17,36 +21,28 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 		}
 	}
-	use "folke/neodev.nvim"
+	use 'folke/neodev.nvim'
 	------------------------------------------------------------
 
 
 
 	--------------- Colorschemes -------------------------------
-	use {"rebelot/kanagawa.nvim", as = 'kanagawa'}
+	use {'rebelot/kanagawa.nvim', as = 'kanagawa'}
 	use {'decaycs/decay.nvim', as = 'decay'}
 	use "VDuchauffour/neodark.nvim"
 	use 'Mofiqul/vscode.nvim'
+	use 'daschw/leaf.nvim'
+	use 'Mofiqul/dracula.nvim'
+	use 'AxelGard/oneokai.nvim'
 	use ('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 	---------------------------------------------------------------	
 
 
-
 	use 'voldikss/vim-floaterm'
 
-	use {
-		'numToStr/Comment.nvim',
-		config = function()
-			require('Comment').setup()
-		end
-	}
+	use 'numToStr/Comment.nvim'
 
-	use {
-		"windwp/nvim-autopairs",
-		config = function() require("nvim-autopairs").setup {} end
-	}
-
-
+	use	'windwp/nvim-autopairs'
 
 	use 'nvim-tree/nvim-tree.lua'
 
@@ -57,11 +53,9 @@ return require('packer').startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-
-	use 'fneu/breezy'
-
-	use 'daschw/leaf.nvim'
-
+	
+	use 'sindrets/diffview.nvim'
 end)
+
 
 

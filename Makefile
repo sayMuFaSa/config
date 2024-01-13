@@ -1,7 +1,4 @@
-sync:update
-update:
-	cp .zshenv $$HOME/.zshenv
+all:install
 
-resync:reupdate
-reupdate:
-	cp $$HOME/.zshenv .zshenv
+install:
+	ln -t $$HOME -s $$(pwd)/.zshenv

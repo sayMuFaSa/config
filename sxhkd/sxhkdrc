@@ -9,7 +9,8 @@
 
 
 ########################## My mappings ######################################################
-
+alt + w
+	bspc query --names -D -d .occupied | dmenu -fn FreeSans-15 -l 13 | xargs bspc desktop -f 
 # screenshot
 alt + y
 	scrot
@@ -25,10 +26,15 @@ super + r
 # terminal emulator
 alt + Return
 	alacritty
+alt + shift + Return
+	st -f 'Dejavu SansM Nerd Font Mono-20'
+# dmenu
+alt + d
+	dmenu_run -nb '#1e2426' -fn FreeSans-15 -l 13
 
 # dmenu
 alt + p
-	dmenu_run -fn FreeSans-15 -l 13
+	cat $HOME/.config/sxhkd/graphical | sort | dmenu -f -nb '#1e2426' -fn FreeSans-15 -l 13 | /bin/sh &
 
 
 # Volume buttons
@@ -40,9 +46,6 @@ XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 XF86AudioMute
    pactl set-source-mute @DEFAULT_SINK@
-
-#############################################################################################
-
 
 
 
@@ -142,5 +145,3 @@ super + ctrl + shift + space
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-############################################################################################

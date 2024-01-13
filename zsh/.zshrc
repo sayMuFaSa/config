@@ -28,7 +28,7 @@ setopt PROMPT_SUBST
 
 a=$'\n'
 
-glyph=$(test $TERM = 'xterm-256color' && echo '❯' || echo '>')
+glyph=$((test $TERM = 'xterm-256color' || test $TERM = 'st-256color') && echo '❯' || echo '>')
 
 PS1='%~ %F{blue}%B${vcs_info_msg_0_}%b%f$a$glyph '
 ##################################################################################
@@ -38,7 +38,7 @@ PS1='%~ %F{blue}%B${vcs_info_msg_0_}%b%f$a$glyph '
 
 ################################## Lf file manager ##############################
 
-function lf(){
+function lf() {
 	l=$(/usr/bin/lf -print-last-dir)
 	test -f ~/.cache/lfcd && cd $l && rm ~/.cache/lfcd
 }
@@ -55,15 +55,17 @@ alias n="nvim"
 
 alias t="sudo tlp start"
 
-alias c="clear"
-
 alias s="sensors"
 
 alias clean="make clean"
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 
-alias clear='clear ; top=""'
+alias lsd='eza -lh --group --git --icons'
+
+alias clear='clear && top=""'
+
+alias c='clear'
 
 alias xi='sudo xbps-install'
 
