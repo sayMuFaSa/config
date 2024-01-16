@@ -51,7 +51,7 @@ fi
 
 # My additions:
 
-readonly wallpaper=$HOME/Downloads/image/mountains.jpg
+readonly wallpaper=$HOME/Downloads/image/nixos.png
 
 brightnessctl set 30
 xset r rate 300 50

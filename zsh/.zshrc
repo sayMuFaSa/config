@@ -17,27 +17,21 @@ compinit
 
 
 ################################ Prompt #########################################
-autoload -Uz vcs_info # vcs stands for version control system 
-
-top=''
-precmd() { vcs_info ; echo -n "$top"; top=$'\n' }
-
-zstyle ':vcs_info:git:*' formats '%b '
+precmd() { echo -n "$top"; top=$'\n' ; branch=$(git branch --show-current 2> /dev/null) }
 
 setopt PROMPT_SUBST
 
-a=$'\n'
+new_line=$'\n'
 
 glyph=$((test $TERM = 'xterm-256color' || test $TERM = 'st-256color') && echo '❯' || echo '>')
 
-PS1='%~ %F{blue}%B${vcs_info_msg_0_}%b%f$a$glyph '
+PS1='%~ %F{blue}%B$branch%b%f$new_line$glyph '
 ##################################################################################
 
 
 
 
 ################################## Lf file manager ##############################
-
 function lf() {
 	l=$(/usr/bin/lf -print-last-dir)
 	test -f ~/.cache/lfcd && cd $l && rm ~/.cache/lfcd
@@ -51,17 +45,17 @@ function lf() {
 ############################## Aliases #################################################
 alias grep='grep --color=auto'
 
-alias n="nvim"
+alias n='nvim'
 
-alias t="sudo tlp start"
+alias t='sudo tlp start'
 
-alias s="sensors"
+alias s='sensors'
 
-alias clean="make clean"
+alias clean='make clean'
 
 alias ls='ls --color=auto --group-directories-first'
 
-alias lsd='eza -lh --group --git --icons'
+alias lsd='eza -lh --group --git --git-ignore --icons'
 
 alias clear='clear && top=""'
 

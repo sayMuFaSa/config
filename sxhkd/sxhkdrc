@@ -9,8 +9,6 @@
 
 
 ########################## My mappings ######################################################
-alt + w
-	bspc query --names -D -d .occupied | dmenu -fn FreeSans-15 -l 13 | xargs bspc desktop -f 
 # screenshot
 alt + y
 	scrot
