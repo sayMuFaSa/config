@@ -1,3 +1,6 @@
 export EDITOR="nvim"
-export XINITRC=$HOME/.config/xorg/.xinitrc
-export ZDOTDIR=$HOME/.config/zsh
+export USER=farid
+export HOME=/home/$USER
+export CONFIG=$HOME/.config
+export XINITRC=$CONFIG/xorg/.xinitrc
+export ZDOTDIR=$CONFIG/zsh

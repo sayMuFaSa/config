@@ -1,0 +1,12 @@
+#!/bin/sh
+
+file=~/.cache/touchpad_on
+
+if [ -f $file ];then
+	rm $file
+	xinput disable "$(xinput list --name-only | grep Touchpad)"
+	xdotool mousemove 9999 9999
+else
+	touch $file 
+	xinput enable "$(xinput list --name-only | grep Touchpad)"
+fi

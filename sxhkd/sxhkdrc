@@ -13,6 +13,10 @@
 alt + y
 	scrot
 
+# Toggle touch pad
+super + d
+	$CONFIG/sxhkd/touchpad
+
 # us keyboard
 super + u
 	setxkbmap us
@@ -23,16 +27,16 @@ super + r
 
 # terminal emulator
 alt + Return
-	alacritty
+	st -f "monospace:size=20"
 alt + shift + Return
-	st -f 'Dejavu SansM Nerd Font Mono-20'
+	st_mine -f "monospace:size=20"
 # dmenu
-alt + d
+alt + p
 	dmenu_run -nb '#1e2426' -fn FreeSans-15 -l 13
 
 # dmenu
-alt + p
-	cat $HOME/.config/sxhkd/graphical | sort | dmenu -f -nb '#1e2426' -fn FreeSans-15 -l 13 | /bin/sh &
+# alt + p
+#	cat $HOME/.config/sxhkd/graphical | sort | dmenu -f -nb '#1e2426' -fn FreeSans-15 -l 13 | /bin/sh &
 
 
 # Volume buttons

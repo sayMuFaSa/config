@@ -51,7 +51,9 @@ alias t='sudo tlp start'
 
 alias s='sensors'
 
-alias clean='make clean'
+alias mr='make run'
+
+alias mc='make clean'
 
 alias ls='ls --color=auto --group-directories-first'
 
