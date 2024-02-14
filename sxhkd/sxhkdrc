@@ -14,14 +14,13 @@ alt + y
 	scrot
 
 # Toggle touch pad
-super + d
+alt + d
 	$CONFIG/sxhkd/touchpad
 
-# us keyboard
+# Keyboard
 super + u
 	setxkbmap us
 
-# russian keyboard 
 super + r
 	setxkbmap ru
 
@@ -30,14 +29,10 @@ alt + Return
 	st -f "monospace:size=20"
 alt + shift + Return
 	st_mine -f "monospace:size=20"
+
 # dmenu
 alt + p
 	dmenu_run -nb '#1e2426' -fn FreeSans-15 -l 13
-
-# dmenu
-# alt + p
-#	cat $HOME/.config/sxhkd/graphical | sort | dmenu -f -nb '#1e2426' -fn FreeSans-15 -l 13 | /bin/sh &
-
 
 # Volume buttons
 XF86AudioRaiseVolume 

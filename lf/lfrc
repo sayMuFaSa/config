@@ -6,18 +6,6 @@ cmd lfcd :{{
 	$touch ~/.cache/lfcd
 	quit
 }}
-# set previewer ~/.config/lf/preview.sh
-# set cleaner ~/.config/lf/cleaner.sh
-# cmd scrollingj :{{
-# down
-# reload
-# }}
-
-# cmd scrollingk :{{
-# up
-# reload
-# $echo $previewer >> ~/jack.com
-# }}
 
 cmd fuzzy ${{
 lf -remote "send $id select $(fzf -e)"
@@ -30,5 +18,3 @@ map A push :Dirname<space>
 map i $cat
 map Q lfcd
 map F fuzzy
-# map j scrollingj
-# map k scrollingk

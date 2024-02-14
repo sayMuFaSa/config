@@ -4,11 +4,13 @@ cargo
 dmenu
 eza
 feh
+fzf
 gcc
 git
 go
 lf
 make
+man-pages-devel
 mesa
 neovim
 nsxiv
@@ -20,6 +22,5 @@ xclip
 xdotool
 xinit
 xinput
-xorg-input-drivers
 xorg-minimal
 zsh
