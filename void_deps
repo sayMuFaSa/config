@@ -1,6 +1,7 @@
 brightnessctl
 bspwm
 cargo
+connman
 dmenu
 eza
 feh
@@ -20,7 +21,7 @@ st
 sxhkd
 xclip
 xdotool
-xinit
 xinput
 xorg-minimal
+xinit
 zsh

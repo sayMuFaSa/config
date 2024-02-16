@@ -2,8 +2,18 @@
 HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
-#################################################################################
 
+fzf-history-widget() {
+	zle reset-prompt
+	LBUFFER+=$(cat ~/.histfile | fzf -e --tac --height=10)
+}
+
+zle     -N            fzf-history-widget
+bindkey -M emacs '^R' fzf-history-widget
+bindkey -M vicmd '^R' fzf-history-widget
+bindkey -M viins '^R' fzf-history-widget
+
+#################################################################################
 
 
 ######################### Completion #############################################
@@ -15,19 +25,11 @@ compinit
 
 
 
+############################### Prompt ##########################################
+. $CONFIG/zsh/prompt_new
 
-################################ Prompt #########################################
-precmd() { echo -n "$top"; top=$'\n' ; branch=$(git branch --show-current 2> /dev/null) }
-
-setopt PROMPT_SUBST
-
-new_line=$'\n'
-
-glyph=$((test $TERM = 'xterm-256color' || test $TERM = 'st-256color') && echo '❯' || echo '>')
-
-PS1='%~ %F{blue}%B$branch%b%f$new_line$glyph '
-##################################################################################
-
+# . $CONFIG/zsh/prompt_old
+################################################################################
 
 
 
@@ -36,10 +38,7 @@ function lf() {
 	l=$(/usr/bin/lf -print-last-dir)
 	test -f ~/.cache/lfcd && cd $l && rm ~/.cache/lfcd
 }
-
 #################################################################################
-
-
 
 
 ############################## Aliases #################################################
@@ -69,7 +68,6 @@ alias xr='sudo xbps-remove'
 
 alias xq='xbps-query'
 ########################################################################################
-
 
 
 #################################### Misc ############################################

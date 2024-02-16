@@ -1,0 +1,9 @@
+precmd() { echo -n "$top"; top=$'\n' ; branch=$(git branch --show-current 2> /dev/null) }
+
+setopt PROMPT_SUBST
+
+new_line=$'\n'
+
+glyph=$((test $TERM = 'xterm-256color' || test $TERM = 'st-256color') && echo '❯' || echo '>')
+
+PS1='%~ %F{blue}%B$branch%b%f$new_line$glyph '
