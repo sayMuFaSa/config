@@ -26,9 +26,7 @@ super + r
 
 # terminal emulator
 alt + Return
-	st -f "monospace:size=20"
-alt + shift + Return
-	st_mine -f "monospace:size=20"
+	st
 
 # dmenu
 alt + p
