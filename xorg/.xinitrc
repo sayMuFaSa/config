@@ -57,5 +57,5 @@ brightnessctl set 30
 xset r rate 300 50
 sxhkd &
 polybar &
-feh --bg-scale $wallpaper &
+feh --no-fehbg --bg-scale $wallpaper &
 exec bspwm

@@ -1,5 +1,5 @@
 ######################### History ###############################################
-HISTFILE=~/.histfile
+HISTFILE=~/.cache/histfile
 HISTSIZE=100000
 SAVEHIST=100000
 
