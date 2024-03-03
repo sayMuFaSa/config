@@ -25,6 +25,7 @@ red = "0xf06c75"
 TERM = "xterm-256color"
 
 [font]
+normal = { family = "Source Code Pro"}
 size = 10
 
 # [window]

@@ -5,7 +5,7 @@ SAVEHIST=100000
 
 fzf-history-widget() {
 	zle reset-prompt
-	LBUFFER+=$(cat ~/.histfile | fzf -e --tac --height=10)
+	LBUFFER+=$(cat ~/.cache/histfile | fzf -e --tac --height=10)
 }
 
 zle     -N            fzf-history-widget
@@ -58,8 +58,6 @@ alias ls='ls --color=auto --group-directories-first'
 
 alias lsd='eza -lh --group --git --git-ignore --icons'
 
-alias clear='clear && top=""'
-
 alias c='clear'
 
 alias xi='sudo xbps-install'
@@ -67,6 +65,8 @@ alias xi='sudo xbps-install'
 alias xr='sudo xbps-remove'
 
 alias xq='xbps-query'
+
+alias wget='wget --hsts-file=$HOME/.cache/.wget-hsts'
 ########################################################################################
 
 

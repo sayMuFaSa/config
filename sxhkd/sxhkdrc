@@ -24,6 +24,9 @@ super + u
 super + r
 	setxkbmap ru
 
+# Floating terminal
+alt + shift + Return
+	st -c St
 # terminal emulator
 alt + Return
 	st
@@ -79,11 +82,8 @@ super + g
 #
 
 # set the window state
-alt + {t,shift + t,s}
-	bspc node -t {tiled,pseudo_tiled,floating}
-
-alt + f
-	bspc node -t fullscreen
+alt + {f,t,shift + t,s}
+	bspc node -t {fullscreen,tiled,pseudo_tiled,floating}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -137,6 +137,10 @@ super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 
-# expand a window by moving one of its side outward
+
+# Window resizing.
 super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0} # expand
+
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0} # shrink

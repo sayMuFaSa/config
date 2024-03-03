@@ -7,7 +7,6 @@ setopt PROMPT_SUBST
 
 glyph=$((test $TERM = 'xterm-256color' || test $TERM = 'st-256color') && echo '❯' || echo '>')
 
-# new_line=$'\n'
-# PS1='%~ %F{blue}%B$branch%b%f$new_line$glyph '
-
 PS1='%~%F{blue}%B$branch%b%f $glyph '
+
+alias clear='clear -x'
