@@ -29,4 +29,4 @@ lf() {
 }
 eval "$(starship init zsh)"
 setopt autocd
-[ -f "$HOME/TODO.md" ] && bat "$HOME/TODO.md"
+[ -f "$HOME/TODO.md" ] && bat --paging=never "$HOME/TODO.md"
