@@ -1,0 +1,6 @@
+#!/bin/sh
+
+umount -R $1/proc
+umount -R $1/sys
+umount -R $1/dev
+umount -R $1/run

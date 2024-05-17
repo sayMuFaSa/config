@@ -1,0 +1,8 @@
+#!/bin/sh
+
+setxkbmap us
+cat <<EOF | dmenu -nb '#1e2426' -fn FreeSans-15 -l 3 | xargs setxkbmap
+us
+az
+ru
+EOF 

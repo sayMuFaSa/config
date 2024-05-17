@@ -1,0 +1,8 @@
+#!/bin/sh
+
+read -r file
+
+case "$1" in
+	w) xwallpaper --zoom "$file" ;;
+	*) exit 1
+esac

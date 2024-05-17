@@ -1,0 +1,14 @@
+#!/bin/sh
+
+file=/tmp/touchpad_on
+touchpad=$(xinput list --name-only | grep 'Touchpad' | tr -d '∼' | xargs)
+
+if [ -f $file ];then
+	rm $file
+	xinput disable "$touchpad"
+	xdotool mousemove 9999 9999
+else
+	touch $file
+	chmod a+w $file
+	xinput enable "$touchpad"
+fi

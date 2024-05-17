@@ -1,0 +1,24 @@
+set shell sh
+
+cmd fuzzy $lf -remote "send $id select $(fd | fzf -e)"
+cmd Filename %{{
+	case "$@" in
+		*/) mkdir -- "$@" ;;
+		*)  touch -- "$@"
+	esac
+}}
+cmd on-cd &{{
+	export STARSHIP_SHELL=
+	export STARSHIP_CONFIG=~/.config/lf/starship.toml
+	fmt="$(starship prompt)"
+	lf -remote "send $id set promptfmt \"$fmt\""
+}}
+
+
+
+map . set hidden!
+map D delete
+map a push :Filename<space>
+map i set icons!
+map F fuzzy
+on-cd

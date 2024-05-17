@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mount --types proc /proc $1/proc
+mount --rbind /sys $1/sys
+mount --rbind /dev $1/dev
+mount --bind  /run $1/run
